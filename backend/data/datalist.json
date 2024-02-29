@@ -1,0 +1,30 @@
+{
+
+    "list": [
+        {
+            "text": "cose da fare",
+            "one": false
+        },
+        {
+            "text": "cose da fare",
+            "done": true
+        },
+        {
+            "text": "cose da fare",
+            "done": false
+        },
+        {
+            "text": "cose da fare",
+            "done": true
+        },
+        {
+            "text": "cose da fare",
+            "done": false
+        },
+        {
+            "text": "cose da fare",
+            "done": true
+        }
+    ]
+    
+}
