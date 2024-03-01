@@ -8,15 +8,18 @@ const app = createApp({
     };
   },
 
-  //1 creo il metodo per la chiamata axios all'api
   methods: {
+    //1 creo il metodo per la chiamata axios all'api
     fetchToDoList() {
-      axios
-        .get("http://localhost/php-todo-list-json/backend/api/list-to-do.php")
-        .then((response) => {
-          console.log(response.data.list);
-          this.list = response.data.list;
-        });
+      axios.get("../backend/api/list-to-do.php").then((response) => {
+        console.log(response.data);
+        this.list = response.data;
+      });
+    },
+
+    toDoItem() {
+      // al click aggiungere la classe "text-decoration-line-through"
+      console.log("Fatto!");
     },
   },
 

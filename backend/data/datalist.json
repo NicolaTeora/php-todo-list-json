@@ -1,5 +1,4 @@
-{
-    "list": [
+[
     {
         "text": "cose da fare",
         "done": false
@@ -25,5 +24,5 @@
         "done": true
     }
 ]
-}
+
 
