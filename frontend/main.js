@@ -5,6 +5,11 @@ const app = createApp({
     return {
       titleApp: "ToDo List",
       list: [],
+
+      newToDo: {
+        text: "",
+        done: false,
+      },
     };
   },
 
@@ -12,9 +17,25 @@ const app = createApp({
     //1 creo il metodo per la chiamata axios all'api
     fetchToDoList() {
       axios.get("../backend/api/list-to-do.php").then((response) => {
-        console.log(response.data);
         this.list = response.data;
       });
+    },
+
+    //chiamata per aggiunta(invio) task toDo
+    fetchAddToDoList() {
+      //metto in una var i parametri da inviare
+      const params = {
+        text: this.newToDo.text,
+        done: false,
+      };
+      const dataHeaders = {
+        headers: { "Content-Type": "multipart/form-data" },
+      };
+      axios
+        .post("../backend/api/store-task.php", params, dataHeaders)
+        .then((response) => {
+          this.list = response.data;
+        });
     },
 
     toDoItem() {

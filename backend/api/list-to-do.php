@@ -1,5 +1,5 @@
 <?php 
-//versione breve per stampare
+//versione breve per stampare la lista
 
 # 1 recupero il file (formato stringa) con i data che mi serve stampare
 $json_file_list = file_get_contents('../data/datalist.json');
