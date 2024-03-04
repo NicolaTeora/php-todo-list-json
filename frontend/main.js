@@ -23,16 +23,18 @@ const app = createApp({
 
     //chiamata per aggiunta(invio) task toDo
     fetchAddToDoList() {
-      //metto in una var i parametri da inviare
+      //dati da postare
       const params = {
         text: this.newToDo.text,
         done: false,
       };
-      const dataHeaders = {
+      //metto in una var i parametri da inviare
+      const Headers = {
         headers: { "Content-Type": "multipart/form-data" },
       };
+      //chiamata aggiunta task
       axios
-        .post("../backend/api/store-task.php", params, dataHeaders)
+        .post("../backend/api/store-task.php", params, Headers)
         .then((response) => {
           this.list = response.data;
         });
